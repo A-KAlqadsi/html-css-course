@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Accordion - FAQ</title>
+    <style>
+      * {
+        border: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        line-height: 1;
+      }
+
+      .accordion {
+        width: 800px;
+        margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+        padding: 24px;
+        background-color: #fff;
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 30px;
+        font-weight: 800;
+      }
+
+      header p {
+        color: #868e96;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+
+      .icon {
+        width: 24px;
+        height: 24px;
+      }
+
+      .icon-down {
+        display: none;
+      }
+
+      .item {
+        padding: 16px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 24px;
+        align-items: center;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .hidden-box {
+        grid-column: 1/3;
+        grid-row: 2;
+        display: none;
+      }
+
+      .open .hidden-box {
+        display: block;
+      }
+
+      .open .icon-right {
+        display: none;
+      }
+
+      .open .icon-down {
+        display: inline-block;
+      }
+
+      .question-text {
+        font-size: 18px;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="accordion">
+      <header>
+        <h1>FAQ</h1>
+        <p>
+          We know that you have a lot of questions,<br />
+          We've tried to list the most important ones😇
+        </p>
+      </header>
+
+      <div class="container">
+        <div class="item open">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon icon-question"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"
+            />
+          </svg>
+
+          <p class="question-text">
+            Do I need to pay only once to get Popkit for like?
+          </p>
+          <div class="hidden-box">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
+              sunt voluptas, unde aliquam dolore quibusdam ducimus
+            </p>
+          </div>
+          <div class="icons">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon icon-down"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon icon-right"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m8.25 4.5 7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="item">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon icon-question"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"
+            />
+          </svg>
+
+          <p class="question-text">
+            Do I need to pay only once to get Popkit for like?
+          </p>
+          <div class="hidden-box">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
+              sunt voluptas, unde aliquam dolore quibusdam ducimus
+            </p>
+          </div>
+          <div class="icons">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon icon-down"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon icon-right"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m8.25 4.5 7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="item">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon icon-question"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"
+            />
+          </svg>
+
+          <p class="question-text">
+            Do I need to pay only once to get Popkit for like?
+          </p>
+          <div class="hidden-box">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
+              sunt voluptas, unde aliquam dolore quibusdam ducimus
+            </p>
+          </div>
+          <div class="icons">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon icon-down"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon icon-right"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m8.25 4.5 7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="item">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon icon-question"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"
+            />
+          </svg>
+
+          <p class="question-text">
+            Do I need to pay only once to get Popkit for like?
+          </p>
+          <div class="hidden-box">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
+              sunt voluptas, unde aliquam dolore quibusdam ducimus
+            </p>
+          </div>
+          <div class="icons">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon icon-down"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon icon-right"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m8.25 4.5 7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

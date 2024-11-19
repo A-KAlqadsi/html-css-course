@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>FAQs - Accordion</title>
+
+    <style>
+      * {
+        border: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        line-height: 1;
+      }
+
+      .accordion {
+        width: 800px;
+        margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+        padding: 24px;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 24px;
+      }
+
+      .item {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        row-gap: 16px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        padding: 16px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        font-weight: 500;
+      }
+
+      .icon {
+        width: 24px;
+        height: 24px;
+      }
+
+      .icon-up {
+        display: none;
+      }
+
+      .open .icon-up {
+        display: inline-block;
+      }
+
+      .open .icon-down {
+        display: none;
+      }
+
+      .hidden-box {
+        grid-column: 1;
+        grid-row: 2;
+        display: none;
+      }
+      .open .hidden-box {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="accordion">
+      <h1>FAQS</h1>
+      <div class="container">
+        <div class="item">
+          <h2>How can I get started?</h2>
+
+          <div class="icons">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon icon-down"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon icon-up"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m4.5 15.75 7.5-7.5 7.5 7.5"
+              />
+            </svg>
+          </div>
+          <div class="hidden-box">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
+            </p>
+          </div>
+        </div>
+        <div class="item open">
+          <h2>How can I get started?</h2>
+          <div class="icons">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon icon-down"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon icon-up"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m4.5 15.75 7.5-7.5 7.5 7.5"
+              />
+            </svg>
+          </div>
+          <div class="hidden-box">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
