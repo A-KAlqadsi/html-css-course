@@ -31,86 +31,90 @@
         color: #343a40;
         line-height: 1;
       }
+
       .carousel {
         width: 800px;
         margin: 100px auto;
-        background-color: #087f5b;
-        border-radius: 8px;
-        padding: 32px 48px 32px 86px;
+        padding: 48px 80px 80px 80px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 
         display: flex;
         align-items: center;
-        gap: 86px;
+        gap: 96px;
 
         position: relative;
       }
 
-      img {
-        height: 200px;
-        border-radius: 8px;
-        transform: scale(1.5);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+      .testimonial {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        color: #868e96;
+      }
+
+      .author-info {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .testimonial-title {
+        color: #bd8600;
+        font-size: 30px;
+        line-height: 1.03;
       }
 
       .testimonial-text {
-        font-size: 18px;
-        font-weight: 500;
         line-height: 1.5;
-        margin-bottom: 32px;
-        color: #e6fcf5;
-      }
-      .testimonial-author {
-        font-size: 14px;
-        color: #c3fae8;
-        margin-bottom: 4px;
-      }
-      .testimonial-job {
-        font-size: 12px;
-        color: #c3fae8;
       }
 
-      /* CONTROLS  */
-      .btn {
-        background-color: #fff;
-        border: none;
-        height: 40px;
-        width: 40px;
+      .main-img {
+        height: 200px;
+        transform: scale(1.6);
+      }
+
+      .log {
+        height: 50px;
         border-radius: 50%;
-        position: absolute;
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn {
+        background-color: #bd8600;
+        border: none;
+        padding: 10px;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
         cursor: pointer;
-        /* centering the arrow */
+
         display: flex;
         align-items: center;
         justify-content: center;
+
+        position: absolute;
+      }
+
+      .btn-icon {
+        width: 24px;
+        height: 24px;
+        stroke: #fff;
       }
 
       .btn--left {
-        /* In relation to parent element */
         left: 0;
         top: 50%;
-
-        /* In relation to ELEMENT ITSELF */
-        transform: translate(-50%, -50%);
-        /* how to center absolute */
+        transform: translate(0, -50%);
       }
 
       .btn--right {
         right: 0;
         top: 50%;
-        transform: translate(50%, -50%);
-      }
-
-      .btn-icon {
-        height: 24px;
-        width: 24px;
-        stroke: #087f5b;
+        transform: translate(0, -50%);
       }
       .dots {
         position: absolute;
-        left: 50%;
         bottom: 0;
-        transform: translate(-50%, 32px);
+        left: 50%;
+
+        transform: translate(-50%, -12px);
 
         display: flex;
         gap: 12px;
@@ -118,28 +122,36 @@
       .dot {
         height: 12px;
         width: 12px;
-        background-color: #fff;
-        border: 2px solid #087f5b;
         border-radius: 50%;
+        border: 2px solid #bd8600;
+        background-color: #fff;
         cursor: pointer;
       }
 
       .dot:first-child {
-        background-color: #087f5b;
+        background-color: #bd8600;
       }
     </style>
   </head>
   <body>
     <div class="carousel">
-      <img src="maria.jpg" alt="Maria de Almeida" />
+      <img class="main-img" src="../maria.jpg" alt="Maria de Almeida" />
       <blockquote class="testimonial">
+        <h2 class="testimonial-title">
+          99designs is a platform with a good name and a very good service...
+        </h2>
+
         <p class="testimonial-text">
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-          sunt natus itaque. Cumque explicabo ullam consectetur adipisci
-          distinctio maxime similique id."
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a ex
+          ratione molestiae inventore voluptatum, excepturi nulla commodi rerum
         </p>
-        <p class="testimonial-author">Maria de Almeida</p>
-        <p class="testimonial-job">Senior Product Manager at EDP Comercial</p>
+        <div class="author-info">
+          <img class="log" src="../maria.jpg" alt="" />
+          <div>
+            <p class="testimonial-author">Maria de Almedia</p>
+            <p class="testimonial-job">Senior Product Manager</p>
+          </div>
+        </div>
       </blockquote>
       <button class="btn btn--left">
         <svg
@@ -153,7 +165,7 @@
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
-            d="M15.75 19.5 8.25 12l7.5-7.5"
+            d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
           />
         </svg>
       </button>
@@ -169,15 +181,15 @@
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
-            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
           />
         </svg>
       </button>
       <div class="dots">
         <button class="dot">&nbsp;</button>
-        <button class="dot">&nbsp;</button>
-        <button class="dot">&nbsp;</button>
-        <button class="dot">&nbsp;</button>
+        <button class="dot"></button>
+        <button class="dot"></button>
+        <button class="dot"></button>
       </div>
     </div>
   </body>
