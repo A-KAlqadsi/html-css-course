@@ -51,6 +51,11 @@ SPACING SYSTEM (px)
 
 */
 
+:root {
+  --primary-color: #e67e22;
+  --Shade-primary-color: #cf711f;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -149,7 +154,7 @@ body {
   display: block;
   font-size: 1.6rem;
   font-weight: 500;
-  color: #cf711f;
+  color: var(--Shade-primary-color);
   text-transform: uppercase;
   margin-bottom: 1.6rem;
   letter-spacing: 0.75px;
@@ -180,13 +185,13 @@ body {
 
 .btn--full:link,
 .btn--full:visited {
-  background-color: #e67e22;
+  background-color: var(--primary-color);
   color: #fff;
 }
 
 .btn--full:hover,
 .btn--full:active {
-  background-color: #cf711f;
+  background-color: var(--Shade-primary-color);
 }
 
 .btn--outline:link,
@@ -219,7 +224,7 @@ body {
 .link:link,
 .link:visited {
   display: inline-block;
-  color: #e67e22;
+  color: var(--primary-color);
   text-decoration: none;
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;
@@ -232,7 +237,7 @@ body {
 
 .link:hover,
 .link:active {
-  color: #cf711f;
+  color: var(--Shade-primary-color);
   border-bottom: 1px solid transparent;
 }
 
@@ -253,7 +258,7 @@ body {
 .list-icon {
   width: 3rem;
   height: 3rem;
-  color: #e67e22;
+  color: var(--primary-color);
 }
 
 *:focus {

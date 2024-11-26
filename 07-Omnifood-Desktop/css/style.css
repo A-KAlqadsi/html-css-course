@@ -1,3 +1,7 @@
+:root {
+  --primary-color: #e67e22;
+  --Shade-primary-color: #cf711f;
+}
 /* *************************** */
 /* HEADER SECTION */
 /* *************************** */
@@ -44,7 +48,7 @@
 
 .main-nav-link:hover,
 .main-nav-link:active {
-  color: #cf711f;
+  color: var(--Shade-primary-color);
 }
 
 .main-nav-link.nav-cat:link,
@@ -56,12 +60,12 @@
   -ms-border-radius: 9px;
   -o-border-radius: 9px;
   color: #fff;
-  background-color: #e67e22;
+  background-color: var(--primary-color);
 }
 
 .main-nav-link.nav-cat:hover,
 .main-nav-link.nav-cat:active {
-  background-color: #cf711f;
+  background-color: var(--Shade-primary-color);
 }
 
 /* *************************** */
@@ -128,7 +132,7 @@
 }
 
 .delivered-text span {
-  color: #cf711f;
+  color: var(--Shade-primary-color);
   font-weight: 700;
 }
 
@@ -322,7 +326,7 @@
 .meal-icon {
   height: 2.4rem;
   width: 2.4rem;
-  color: #e67e22;
+  color: var(--primary-color);
 }
 
 .meal-img {
@@ -459,7 +463,7 @@
 }
 
 .plan-name {
-  color: #cf711f;
+  color: var(--Shade-primary-color);
   font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -498,7 +502,7 @@
 }
 
 .feature-icon {
-  color: #e67e22;
+  color: var(--primary-color);
   height: 3.2rem;
   width: 3.2rem;
   margin-bottom: 3.2rem;
@@ -532,9 +536,13 @@
 .cta {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  /* background-color: #e67e22; */
+  /* background-color: var(--primary-color); */
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
-  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  background-image: linear-gradient(
+    to right bottom,
+    #eb984e,
+    var(--primary-color)
+  );
 
   border-radius: 1.1rem;
   -webkit-border-radius: 1.1rem;
